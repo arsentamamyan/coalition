@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/products', 'ProductController@show');
+Route::post('/products', 'ProductController@createProduct');
+Route::put('/products/{id}', 'ProductController@updateProduct');
+Route::delete('/products/{id}', 'ProductController@removeProduct');
